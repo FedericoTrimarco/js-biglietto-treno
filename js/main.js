@@ -1,7 +1,7 @@
 // Variabili
 let km;
 let age;
-let ticket;
+// let ticket;
 
 // Km DA PERCORRERE ED ETA' DEL PASSEGGERO
 function calcKm(){
@@ -18,11 +18,12 @@ function calcPrice(){
 
     if( isNaN(km) || isNaN(age) ){
         alert("i dati inseriti non sono validi, ricaricare la pagina");
+        document.getElementById('ticket').innerHTML = `! DATI NON VALIDI !`
     }
     // CALCOLO PREZZO BIGLIETTO MINORENNI & 0VER 65
     else{
     
-        ticket = km * 0.21;
+        let ticket = km * 0.21;
     
         if(age < 18){
           ticket -= (ticket * 20) / 100;
@@ -31,6 +32,6 @@ function calcPrice(){
           ticket -= (ticket * 40) / 100;
         }
     
-        document.getElementById('ticket').innerHTML = `il tuo biglietto costa: ${ticket.toFixed(2)}`
+        document.getElementById('ticket').innerHTML = `il tuo biglietto costa: ${ticket.toFixed(2)}€`
     }
 }
