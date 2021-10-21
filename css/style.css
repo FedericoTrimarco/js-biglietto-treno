@@ -1,0 +1,14 @@
+body{
+     background-image: url("../treno-scelta-migliore-rispetto-a-aereo.jpg");
+     background-size: cover;
+     height: 100vh;
+}
+.bg-lightblack{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.brd-radius-top{
+    border-radius: 20px 20px 0 0;
+}
+.brd-radius-bottom{
+    border-radius: 0 0 20px 20px;
+}
